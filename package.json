@@ -1,0 +1,16 @@
+{
+  "name": "feb23-t3w4-imagedownloader",
+  "version": "1.0.0",
+  "description": "This is a Node project! Make sure we ignore node_modules!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
