@@ -32,6 +32,10 @@ describe("Retrieve a Pokemon URL", () => {
 
 		expect(result).toEqual(expectedImageUrl);
 
-	})
+	});
+
+	afterEach(() => {
+		global.fetch.mockClear();
+	});
 
 })
