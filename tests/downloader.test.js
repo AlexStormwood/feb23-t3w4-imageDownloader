@@ -2,7 +2,7 @@ const {
 	getPokemonPictureUrl
 } = require("../downloader");
 
-describe("Retrieve a Pokemon URL", () => {
+describe("Retrieve a Pokemon Image URL", () => {
 	// if id is 25, URL should be:
 	// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png
 	let expectedImageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
@@ -28,6 +28,8 @@ describe("Retrieve a Pokemon URL", () => {
 	})
 
 	test("If given an ID of 25, url is expected correct URL", async () => {
+
+		
 		let result = await getPokemonPictureUrl(25);
 
 		expect(result).toEqual(expectedImageUrl);
