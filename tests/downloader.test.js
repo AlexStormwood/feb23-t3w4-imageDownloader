@@ -19,13 +19,17 @@ describe("Retrieve a Pokemon URL", () => {
 	global.fetch = jest.fn(() => {
 		console.log("Fetch has been replaced with a Jest mock!");
 		return new Promise((resolve, reject) => {
-			resolve(expectedJsonData);
+			resolve({
+				json: () => {
+					return Promise.resolve(expectedJsonData);
+				}
+			});
 		})
 	})
 
 	test("If given an ID of 25, url is expected correct URL", async () => {
 		let result = await getPokemonPictureUrl(25);
-		
+
 		expect(result).toEqual(expectedImageUrl);
 
 	})
